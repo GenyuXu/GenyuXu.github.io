@@ -7,6 +7,9 @@
   <title>许亘昱 Genyu Xu · 城市气候与景观生态</title>
   <meta name="description" content="许亘昱，云南大学建筑与规划学院讲师、硕士生导师。研究城市热环境、景观生态、人体热舒适与气候适应性规划。">
   <link rel="canonical" href="https://ennxu.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://ennxu.com/">
+  <link rel="alternate" hreflang="en" href="https://ennxu.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://ennxu.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="许亘昱 Genyu Xu · 学术主页">
   <meta property="og:description" content="城市气候、景观生态与人居环境。研究方向、代表论文与学术联系。">
@@ -32,13 +35,25 @@
 
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Genyu Xu","alternateName":"许亘昱","url":"https://ennxu.com/","image":"https://avatars.githubusercontent.com/u/116344521?v=4","jobTitle":"Lecturer","worksFor":{"@type":"CollegeOrUniversity","name":"Yunnan University"},"email":"mailto:xugenyu@ynu.edu.cn","sameAs":["https://orcid.org/0000-0002-4761-0688","https://scholar.google.com/citations?user=tJz-fMIAAAAJ","https://github.com/GenyuXu"],"knowsAbout":["Urban climate","Landscape ecology","Thermal comfort","Climate-responsive urban planning"]}</script>
+  <script>
+// Keep previously shared language-query URLs working without changing page content.
+(() => {
+  const url = new URL(window.location.href);
+  const language = url.searchParams.get('lang');
+  if (language === 'en' || language === 'zh') {
+    url.pathname = language === 'en' ? '/en/' : '/';
+    url.searchParams.delete('lang');
+    window.location.replace(url.href);
+  }
+})();
+</script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">跳至正文</a>
   <header class="site-header"><div class="header-inner">
     <a class="wordmark" href="#about" aria-label="Genyu Xu — home"><span class="brand-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 39V23C6 13.6 13.6 6 23 6H41"/><path d="M14 39V24C14 18.5 18.5 14 24 14H41"/><path d="M22 39V26C22 23.8 23.8 22 26 22H41"/></g><circle cx="37" cy="35" r="4" fill="#2855E8"/></svg></span><span>Genyu Xu<span class="wordmark-note" lang="zh-CN">许亘昱</span></span></a>
     <nav aria-label="主导航" data-i18n-aria="navLabel"><a href="#research" data-i18n="navResearch">研究</a><a href="#publications" data-i18n="navPapers">论文</a><a href="#experience" data-i18n="navExperience">关于</a><a href="#contact" data-i18n="navContact">联系</a></nav>
-    <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English"><span id="language-label">EN</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 5h10M10 2l3 3-3 3M13 11H3m3-3-3 3 3 3"/></svg></button>
+    <a class="language-toggle" id="language-toggle" href="/en/" hreflang="en" lang="en" aria-label="Switch to English"><span id="language-label">EN</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 5h10M10 2l3 3-3 3M13 11H3m3-3-3 3 3 3"/></svg></a>
   </div></header>
   <main id="main">
     <section class="hero page-width" id="about" aria-labelledby="profile-name">
@@ -113,121 +128,28 @@
     <section class="contact-section page-width" id="contact" aria-labelledby="contact-title"><div class="contact-top"><div><p class="section-kicker">04 / CONTACT</p><h2 id="contact-title" data-i18n="contactTitle">学术联系</h2></div><a class="contact-email" href="mailto:xugenyu@ynu.edu.cn">xugenyu@ynu.edu.cn <span aria-hidden="true">↗</span></a></div><div class="contact-bottom"><p data-i18n="contactInstitution">云南大学 · 建筑与规划学院</p><div class="contact-profiles"><a href="https://scholar.google.com/citations?user=tJz-fMIAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="https://orcid.org/0000-0002-4761-0688" target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href="https://github.com/GenyuXu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
   </main>
   <footer class="site-footer page-width"><span>© <span id="copyright-year">2026</span> Genyu Xu</span><a href="#about"><span data-i18n="backTop">返回顶部</span> ↑</a></footer>
-  <div class="visually-hidden" id="language-status" role="status" aria-live="polite"></div>
 <script>
 "use strict";
-const translations = {
-  "en": {
-    "skip": "Skip to content",
-    "navLabel": "Main navigation",
-    "navResearch": "Research",
-    "navPapers": "Publications",
-    "navExperience": "About",
-    "navContact": "Contact",
-    "heroEyebrow": "URBAN CLIMATE & LANDSCAPE ECOLOGY",
-    "name": "Genyu Xu",
-    "nameSecondary": "许亘昱 · Ph.D.",
-    "position": "Lecturer · Master's Supervisor",
-    "affiliation": "School of Architecture and Planning, Yunnan University",
-    "heroIntro": "I study the relationships between urban form, blue-green spaces, and climate. My work combines environmental simulation, field observations, and spatial data analysis to inform climate-responsive planning and design.",
-    "explorePapers": "Selected publications",
-    "emailMe": "Get in touch",
-    "portraitAlt": "Portrait of Genyu Xu",
-    "portraitCaption": "许亘昱 / Genyu Xu",
-    "elsewhere": "ACADEMIC PROFILES",
-    "researchTitle": "Research interests",
-    "research1Title": "Urban climate & morphology",
-    "research1Body": "How urban form affects thermal environments and building energy demand, through neighborhood-scale simulation, improvements to the Urban Weather Generator, and multi-objective optimization.",
-    "research2Title": "Blue-green spaces & ecology",
-    "research2Body": "Climate effects of plateau lake basins and urban blue-green spaces, focusing on lake cooling, landscape patterns, and ecosystem services.",
-    "research3Title": "Thermal comfort & adaptation",
-    "research3Body": "Outdoor microclimates, dynamic thermal exposure, and human adaptation, approached through people’s activities and perceptions to inform healthier spaces.",
-    "papersTitle": "Selected publications",
-    "allPapers": "All publications",
-    "paperTopics": "Browse by topic",
-    "topicclimate": "Urban climate & thermal environments",
-    "topicecology": "Landscape ecology & ecosystem services",
-    "topicbuildings": "Building performance & low-carbon development",
-    "topichealth": "Health, behavior & urban planning",
-    "publicationNote2": "How urban morphology shapes heat, comfort, and cooling demand in a highland city.",
-    "publicationNote10": "Connecting territorial spatial planning and multi-objective optimization through thermal environment control units.",
-    "publicationNote15": "Measuring and optimizing urban thermal environments through planning control factors: a case study of central Guangzhou. (In Chinese)",
-    "publicationNote16": "Extracting and evaluating multivariate thermal environment data at the neighborhood scale in Guangzhou.",
-    "publicationNote17": "Extending and validating the Urban Weather Generator for performance-oriented neighborhood planning.",
-    "publicationNote3": "Natural, socioeconomic, and landscape drivers of ecosystem service supply–demand relationships in the Dianchi Lake Basin.",
-    "publicationNote4": "Revisiting shoreline-buffer indicators to assess directional lake cooling in plateau basin cities.",
-    "publicationNote5": "Scenario-based prediction of land use change and soil conservation in Yunnan with the PLUS–InVEST model.",
-    "publicationNote8": "Drivers of coordination among mountain socioeconomic and ecological systems in the Three Parallel Rivers region.",
-    "publicationNote7": "Combining deep learning and remote sensing to predict building age at scale for urban energy modeling.",
-    "publicationNote9": "Exploring provincial-scale carbon reduction pathways for urban residential buildings in Jiangsu.",
-    "publicationNote12": "Improving building floor acoustics through inorganic sound insulation coatings.",
-    "publicationNote13": "Coupling urban microclimates and building energy dynamics at high spatial and temporal resolutions.",
-    "publicationNote14": "A system dynamics analysis of strategies to mitigate urban residential carbon emissions in Kunming.",
-    "publicationNote1": "How thermal comfort shapes travel and stay behavior in urban nature areas.",
-    "publicationNote6": "A multidimensional accessibility framework for nursing home planning in Kunming.",
-    "publicationNote11": "Integrating social network analysis and risk transmission chains for NIMBY project risk management.",
-    "paperFootnote": "* Corresponding author",
-    "experienceTitle": "Academic background",
-    "appointmentsEducation": "Appointments & education",
-    "postdocDate": "2025 — Present",
-    "postdocTitle": "Postdoctoral researcher",
-    "postdocInstitution": "Research Center for Eco-Environmental Sciences, Chinese Academy of Sciences",
-    "lecturerDate": "2023 — Present",
-    "lecturerTitle": "Lecturer",
-    "lecturerInstitution": "School of Architecture and Planning, Yunnan University",
-    "phdTitle": "Ph.D. in Urban and Rural Planning",
-    "phdInstitution": "School of Architecture, South China University of Technology",
-    "mastersTitle": "M.Eng. in Architecture",
-    "mastersInstitution": "School of Architecture, Xi'an University of Architecture and Technology",
-    "serviceTitle": "Academic service",
-    "editorialTitle": "Editorial boards",
-    "committeeTitle": "Committee memberships",
-    "committee1": "Climate and Human Health Commission, International Society of Biometeorology",
-    "committee2": "Climate Change Working Committee, Chinese Society of Landscape Architecture",
-    "contactTitle": "Get in touch",
-    "contactInstitution": "School of Architecture and Planning, Yunnan University",
-    "backTop": "Back to top"
-  }
-};
-
-"use strict";
 (() => {
-  const button=document.getElementById('language-toggle');
-  const elements=[...document.querySelectorAll('[data-i18n]')];
-  const attrElements=[...document.querySelectorAll('[data-i18n-aria], [data-i18n-alt]')];
-  const chinese=Object.fromEntries(elements.map(el=>[el.dataset.i18n,el.innerHTML]));
-  for(const el of attrElements){const key=el.dataset.i18nAria||el.dataset.i18nAlt;chinese[key]=el.getAttribute(el.dataset.i18nAria?'aria-label':'alt');}
-  const descriptions={zh:'许亘昱，云南大学建筑与规划学院讲师、硕士生导师。研究城市热环境、景观生态、人体热舒适与气候适应性规划。',en:'Genyu Xu, lecturer and master’s supervisor at Yunnan University. Research in urban climate, landscape ecology, thermal comfort, and climate-responsive planning.'};
-  let language='zh';
-  function setLanguage(next,announce=false){
-    language=next==='en'?'en':'zh';const copy=language==='en'?translations.en:chinese;
-    for(const el of elements) if(copy[el.dataset.i18n]!==undefined)el.innerHTML=copy[el.dataset.i18n];
-    for(const el of attrElements){const key=el.dataset.i18nAria||el.dataset.i18nAlt;el.setAttribute(el.dataset.i18nAria?'aria-label':'alt',copy[key]);}
-    document.documentElement.lang=language==='en'?'en':'zh-CN';
-    document.title=language==='en'?'Genyu Xu · Urban Climate & Landscape Ecology':'许亘昱 Genyu Xu · 城市气候与景观生态';
-    document.querySelector('meta[name="description"]').content=descriptions[language];
-    document.querySelector('meta[property="og:title"]').content=document.title;
-    document.querySelector('meta[property="og:description"]').content=descriptions[language];
-    document.getElementById('language-label').textContent=language==='en'?'中文':'EN';
-    button.setAttribute('aria-label',language==='en'?'切换到中文':'Switch to English');
-    if(announce){
-      try{localStorage.setItem('genyu-language',language)}catch{}
-      const url=new URL(location.href);if(language==='en')url.searchParams.set('lang','en');else url.searchParams.delete('lang');
-      try{history.replaceState(null,'',url)}catch{}
-      document.getElementById('language-status').textContent=language==='en'?'English selected':'已切换到中文';
-    }
-  }
-  let initial=new URLSearchParams(location.search).get('lang');
-  if(!initial){try{initial=localStorage.getItem('genyu-language')}catch{}}
-  setLanguage(initial==='en'?'en':'zh');button.addEventListener('click',()=>setLanguage(language==='zh'?'en':'zh',true));
-  const year=new Date().getFullYear();if(year>2026)document.getElementById('copyright-year').textContent=String(year);
-  if('IntersectionObserver' in window){
-    const links=[...document.querySelectorAll('nav a')];
-    const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){for(const link of links){if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')}}},{rootMargin:'-20% 0px -55% 0px'});
-    document.querySelectorAll('main section[id]').forEach(section=>observer.observe(section));
+  const languageLink = document.getElementById('language-toggle');
+  const keepSection = () => { languageLink.hash = window.location.hash; };
+  keepSection();
+  window.addEventListener('hashchange', keepSection);
+  const year = new Date().getFullYear();
+  if (year > 2026) document.getElementById('copyright-year').textContent = String(year);
+  if ('IntersectionObserver' in window) {
+    const links = [...document.querySelectorAll('nav a')];
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) if (entry.isIntersecting) {
+        for (const link of links) {
+          if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        }
+      }
+    }, {rootMargin: '-20% 0px -55% 0px'});
+    document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
   }
 })();
-
 </script>
 </body>
 </html>
